@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vora – Your AI Voice Diary</title>
+  <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      background: #fafafa;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 32px rgba(123, 94, 167, 0.1);
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 12px rgba(123, 94, 167, 0.25);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #7B5EA7;
+      margin-bottom: 0.25rem;
+    }
+
+    .tagline {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .badges {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .badge-google img {
+      height: 50px;
+    }
+
+    .badge-apple img {
+      height: 34px;
+    }
+
+    .badge-ios-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+
+    .coming-soon {
+      font-size: 0.72rem;
+      color: #999;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #7B5EA7;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .back {
+      margin-top: 1.75rem;
+      font-size: 0.8rem;
+    }
+
+    .back a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .back a:hover {
+      color: #7B5EA7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <img class="app-icon" src="/img/icon 512.jpeg" alt="Vora icon">
+    <h1>Vora</h1>
+    <p class="tagline">Your AI voice diary</p>
+
+    <div class="badges">
+      <!-- Android -->
+      <a class="badge-google" href="https://play.google.com/store/apps/details?id=com.heeslabs.vora">
+        <img alt="Get it on Google Play"
+          src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+      </a>
+
+      <!-- iOS (coming soon) -->
+      <div class="badge-ios-wrap">
+        <a class="badge-apple" href="#">
+          <img alt="Download on the App Store"
+            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="/vora/privacy-policy">Privacy Policy</a>
+      <a href="/vora/terms-of-service">Terms of Service</a>
+      <a href="/vora/support">Support</a>
+    </div>
+  </div>
+
+  <p class="back"><a href="/">&larr; Hees Labs</a></p>
+
+  <script>
+    // Auto-redirect based on device
+    (function () {
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPad|iPhone|iPod/.test(ua);
+      var isAndroid = /Android/.test(ua);
+
+      if (isAndroid) {
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.heeslabs.vora';
+      }
+      // iOS redirect: enable once App Store link is live
+      // if (isIOS) {
+      //   window.location.href = 'YOUR_APP_STORE_LINK';
+      // }
+    })();
+  </script>
+
+</body>
+
+</html>
